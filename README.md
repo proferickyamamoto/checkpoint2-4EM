@@ -1,4 +1,4 @@
-# 🧠 Projeto Checkpoint 2 – Desenvolvimento de Sistema de Classificação Inteligente com MLP
+# 🧠 Projeto Avaliativo – Desenvolvimento de Sistema de Classificação Inteligente com MLP
 
 ## 🎯 Objetivo
 Desenvolver um sistema usando **MLP (Multilayer Perceptron)** que classifique dados personalizados, integrando teoria e prática de Redes Neurais. O projeto deverá utilizar informações baseadas na **soma dos RM dos integrantes do grupo** para criar características únicas.
@@ -25,11 +25,26 @@ Cada grupo deverá:
 - Site: [https://www.openml.org/](https://www.openml.org/)
 - Pesquisar o dataset pelo número do ID.
 
-**Exemplo de Soma dos RMs:**
-- RM1 = 12345 → soma = 1+2+3+4+5 = 15
-- RM2 = 54321 → soma = 5+4+3+2+1 = 15
-- Soma total = 30
-- Dataset OpenML a ser utilizado: ID 30 (se existir, senão usar o mais próximo).
+### 📜 Exemplo de código para carregar o dataset do OpenML:
+
+```python
+# Instalar openml caso não tenha
+# pip install openml
+
+import openml
+
+# Substitua pelo ID correspondente à soma dos RMs
+dataset_id = 30
+
+dataset = openml.datasets.get_dataset(dataset_id)
+X, y, _, _ = dataset.get_data(target=dataset.default_target_attribute)
+
+print("Shape das entradas:", X.shape)
+print("Primeiras entradas:")
+print(X.head())
+print("Primeiros rótulos:")
+print(y.head())
+```
 
 ---
 
@@ -38,7 +53,7 @@ Cada grupo deverá:
 | Critério | Descrição | Pontos |
 |:---------|:----------|:------|
 | **1. Dataset selecionado/criado** | Escolha adequada do dataset (OpenML ou fictício) e coerência dos dados. | 2 pts |
-| **2. Implementação correta com sklearn** | Uso correto da biblioteca `MLPClassifier` ou `MLPRegressor`, divisão treino/teste, normalização dos dados. | 2 pts |
+| **2. Implementação correta com sklearn** | Uso correto da biblioteca `MLPClassifier`, divisão treino/teste, normalização dos dados. | 2 pts |
 | **3. Implementação própria de MLP** | Construção de uma rede simples em Python, com feedforward e treinamento (gradiente descendente). | 3 pts |
 | **4. Comparação de resultados** | Análise crítica comparando a implementação própria com o sklearn. | 2 pts |
 | **5. Organização e clareza** | Código limpo, bem comentado e entrega estruturada. | 1 pt |
@@ -51,14 +66,12 @@ Cada grupo deverá:
 - Implementação do modelo com `sklearn`.
 - Implementação de uma MLP simples manualmente.
 - Comparativo de acurácia/erro entre os dois modelos.
-- Código em Python (`.ipynb`) bem comentado.
+- Código em Python (`.ipynb` ou `.py`) bem comentado.
 - Gráficos opcionais da evolução do erro ou acurácia (`matplotlib`).
 - Relatório em `.pdf` ou `.md` (máximo 2 páginas).
 
 ---
 
 ## 📆 Prazo de Entrega
-- A entrega deverá ser realizada até **o final da aula** após a liberação da proposta;
+- A entrega deverá ser realizada até **7 dias** após a liberação da proposta.;
 - Grupo de 5 integrantes e o representante entrega pelo portal.
-
-
