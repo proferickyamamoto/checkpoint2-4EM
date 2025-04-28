@@ -53,7 +53,7 @@ print(y.head())
 | Critério | Descrição | Pontos |
 |:---------|:----------|:------|
 | **1. Dataset selecionado/criado** | Escolha adequada do dataset (OpenML ou fictício) e coerência dos dados. | 2 pts |
-| **2. Implementação correta com sklearn** | Uso correto da biblioteca `MLPClassifier`, divisão treino/teste, normalização dos dados. | 2 pts |
+| **2. Implementação correta com sklearn** | Uso correto da biblioteca `MLPClassifier` ou `MLPRegressor`, divisão treino/teste, normalização dos dados. | 2 pts |
 | **3. Implementação própria de MLP** | Construção de uma rede simples em Python, com feedforward e treinamento (gradiente descendente). | 3 pts |
 | **4. Comparação de resultados** | Análise crítica comparando a implementação própria com o sklearn. | 2 pts |
 | **5. Organização e clareza** | Código limpo, bem comentado e entrega estruturada. | 1 pt |
@@ -73,5 +73,5 @@ print(y.head())
 ---
 
 ## 📆 Prazo de Entrega
-- A entrega deverá ser realizada até **7 dias** após a liberação da proposta.;
-- Grupo de 5 integrantes e o representante entrega pelo portal.
+- A entrega deverá ser realizada até final da aula após a liberação da proposta;
+- Grupo de até 7 integrantes e o representante entrega pelo portal.
